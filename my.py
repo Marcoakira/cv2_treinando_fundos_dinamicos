@@ -7,7 +7,6 @@ from time import sleep
 
 
 
-
 def get_flow(prevs, next):
     flow = cv2.calcOpticalFlowFarneback(prevs, next, None, .1, 3, 5, 1, 5, 2, 1)
     mag, ang = cv2.cartToPolar(flow[..., 0], flow[..., 1])
